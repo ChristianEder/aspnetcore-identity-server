@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/src/aspnetcore-identity-server/bin/Debug/netcoreapp1.0
+/src/aspnetcore-identity-server/obj/Debug/netcoreapp1.0
+/.vs/restore.dg
+*.user
