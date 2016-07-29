@@ -1,5 +1,7 @@
 ﻿using aspnetcore_identity_server.IdentityServer.Data;
 using IdentityServer4.Models;
+using IdentityServer4.Services;
+using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +22,7 @@ namespace aspnetcore_identity_server.IdentityServer
                 .AddDbContext<UserContext>(o => o.UseSqlServer(connectionString))
                 .AddDbContext<IdentityServerOperationalContext>(o => o.UseSqlServer(connectionString))
                 .AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<UserContext>()
                 .AddDefaultTokenProviders();
 
             var identity = services
@@ -33,12 +36,12 @@ namespace aspnetcore_identity_server.IdentityServer
 
             services.AddMvc();
 
-            //identity.Services.AddTransient<IProfileService, ProfileService>();
+            identity.Services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
+            identity.Services.AddTransient<IProfileService, ProfileService>();
         }
 
         public static void ConfigureIdentityServerApp(this IApplicationBuilder app)
         {
-            app.UseIdentity();
             app.UseIdentityServer();
             app.UseMvc();
         }
