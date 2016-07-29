@@ -8,3 +8,6 @@
 /.vs/restore.dg
 *.user
 /src/aspnetcore-identity-server/project.lock.json
+/src/aspnetcore-identity-server/bin/src/aspnetcore-identity-server/bin/Debug/netcoreapp1.0
+/src/aspnetcore-identity-server/bin/src/aspnetcore-identity-server/obj/Debug/netcoreapp1.0
+/.vs/config

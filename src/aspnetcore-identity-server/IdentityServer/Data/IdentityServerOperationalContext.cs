@@ -2,7 +2,7 @@
 using System.Linq;
 using TwentyTwenty.IdentityServer4.EntityFrameworkCore.DbContexts;
 
-namespace aspnetcore_identity_server.IdentityServer
+namespace aspnetcore_identity_server.IdentityServer.Data
 {
 
     public class IdentityServerOperationalContext : OperationalContext
