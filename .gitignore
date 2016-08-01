@@ -11,3 +11,6 @@
 /src/aspnetcore-identity-server/bin/src/aspnetcore-identity-server/bin/Debug/netcoreapp1.0
 /src/aspnetcore-identity-server/bin/src/aspnetcore-identity-server/obj/Debug/netcoreapp1.0
 /.vs/config
+/src/aspnetcore-some-api/bin/Debug/netcoreapp1.0
+/src/aspnetcore-some-api/obj/Debug/netcoreapp1.0
+/src/aspnetcore-some-api/project.lock.json
